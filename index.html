@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MOOO Bistro</title>
+  <link rel="stylesheet" href="styless.css/style.css" />
+</head>
+<body>
+
+<header>
+  <nav style="display: flex; align-items: center; justify-content: space-between;">
+    <ul>
+      <li><a href="#" class="active" onclick="showSection('home')">Domov</a></li>
+      <li><a href="#" onclick="showSection('about')">O nás</a></li>
+      <li><a href="#" onclick="showSection('menu')">Menu</a></li>
+      <li><a href="#" onclick="showSection('contact')">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Úvodná sekcia -->
+<section id="home">
+  <div class="logo-box">
+    <img src="sources/1584700880.avif" alt="Logo" class="logo-under-nav">
+  </div>
+  <h1>Čerstvý ako hovädo</h1>
+  <p>Objednaj si svoje obľúbené jedlo online</p>
+  <a href="#" class="btn" onclick="showSection('menu'); return false;">Objednať si</a>
+</section>
+
+<!-- Ostatné sekcie (skryté na začiatku) -->
+<section id="about" class="content-section">
+  <h2>O NÁS</h2>
+  <h3>Robiť dobré veci je jednoduché, ak ich robíte poctivo a od srdca. Také je aj naše jedlo, z plnohodnotných surovín pripravené poctivou prácou.</p>
+</section>
+
+<section id="menu" class="content-section">
+  <h2>Menu</h2>
+  <div class="menu-items">
+    <div class="menu-item">
+      <h3>Classic Burger</h3>
+      <p>Hovädzie mäso, cheddar, šalát, paradajka</p>
+      <span>€9,50</span>
+    </div>
+    <div class="menu-item">
+      <h3>Spicy BBQ</h3>
+      <p>Hovädzie mäso, BBQ omáčka, jalapeños, syr</p>
+      <span>€9,50</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="content-section">
+  <h2>Kontakt</h2>
+  <p>Adresa: Jesenského 2183/2, 955 01 Topoľčany</p>
+  <p>Telefón: +421 952 072 180</p>
+  <p>Email: info@mooobistro.sk</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 MOOO Bistro. Všetky práva vyhradené.</p>
+</footer>
+
+<script src="javascript.js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+/* Navigácia */
+header {
+  background: #222;
+  width: 100%;
+  height: 80px;
+  padding: 0;
+  position: fixed;
+  z-index: 100;
+
+}
+
+.logo-box {
+  margin: 10px auto;
+  width: auto;
+  height: auto;
+}
+
+.logo-under-nav {
+  width: 100%;
+  height: 25rem;
+  display: inline-block;
+  filter: sepia(40%) saturate(80%) brightness(95%);
+  opacity: 0.15;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  height: 200px;
+}
+
+nav ul li a {
+  margin: 20px 20px 10px 20px;
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 100px;
+  padding: 30px, 40px;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #6ea796;
+  color: white;
+  box-shadow: 0 4px 8px rgba(149, 234, 232, 0.4);
+}
+
+/* Úvodná sekcia - veľký obrázok na pozadí s overlay */
+#home {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../sources/DSC_0613.jpg') center center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  opacity: 0.84;
+
+}
+
+#home h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#home p {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #ddd;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+#home .btn {
+  font-size: 1.3rem;
+  padding: 15px 40px;
+  background-color: #6ea796;
+  ;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px white;
+  transition: background-color 0.3s ease;
+  position: fixed;
+}
+
+#home .btn:hover {
+  background-color: #6ea796;
+  ;
+}
+
+/* Ostatné sekcie sa zobrazujú len ak sú aktívne */
+section.content-section {
+  max-width: auto;
+  height: auto;
+  margin: auto;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+  display: none;
+}
+
+#about {
+
+  width: 100vw;
+  /* celá šírka okna */
+  height: 85vh;
+  /* celá výška okna */
+  background: url('../sources/DSC_6773.jpg') center center / cover no-repeat;
+  display: flex;
+  /* vycentrovanie obsahu */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 0px;
+  opacity: 0.8;
+  margin-top: 80px;
+
+}
+
+section.content-section.active {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 80px;
+  color: #6ea796;
+  ;
+}
+
+h3 {
+  font-size: 2.3rem;
+  line-height: 1.5;
+  color: #aaa7a7;
+  margin: 80px 30px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #ddd;
+  margin-top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Responsívnosť */
+@media (max-width: 600px) {
+  #home h1 {
+    font-size: 2.8rem;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
