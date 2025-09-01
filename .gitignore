@@ -1,0 +1,11 @@
+# Systémové súbory Mac
+.DS_Store
+
+# Nastavenia IDE
+.idea/
+
+# Node.js 
+node_modules/
+
+# Iné dočasné súbory
+*.log
