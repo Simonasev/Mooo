@@ -1,11 +1,12 @@
 # Mooo – Website Redesign
 
-A responsive web redesign for Mooo Bistro, focused on modern UI with CSS/HTML.
+A responsive redesign of the Mooo Bistro website with a focus on a modern, minimalist look.  
+The design uses simple colors and clear layout for better usability.
 
-**Technologies**  
-- HTML5  
-- CSS3  
+## Technologies
+- HTML5
+- CSS3
 
-**How to run**  
-1. Clone the repo  
-2. Open `index.html` in your browser  
+## How to run
+1. Clone the repository
+2. Open `index.html` in your browser
