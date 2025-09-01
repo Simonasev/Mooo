@@ -10,3 +10,6 @@ The design uses simple colors and clear layout for better usability.
 ## How to run
 1. Clone the repository
 2. Open `index.html` in your browser
+
+## Live Demo
+You can view the live website here: https://simonasev.github.io/Mooo/
