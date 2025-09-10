@@ -1,47 +1,50 @@
-function showSection(id) {
-  const sections = ['home', 'about', 'menu', 'contact'];
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("nav a, .btn");
+  const sections = document.querySelectorAll("section");
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
-  sections.forEach(sec => {
-    const el = document.getElementById(sec);
-    if (el) {
-      el.style.display = (sec === id) ? (id === 'home' ? 'flex' : 'block') : 'none';
-    }
-  });
+  function showSection(id) {
+    // prepnutie sekcií
+    sections.forEach(sec => sec.classList.toggle("active", sec.id === id));
+    links.forEach(link => link.classList.toggle("active", link.dataset.section === id));
 
-  // Navigačné linky
-  const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('onclick')?.includes(id)) {
-      link.classList.add('active');
+    // animácia buttonov
+    const homeBtn = document.getElementById("order-btn");
+    if (homeBtn) {
+      homeBtn.classList.remove("visible");
+      if (id === "home") {
+        setTimeout(() => homeBtn.classList.add("visible"), 500);
+      }
     }
-  });
 
-  // Reset + show button
-  const homeBtn = document.getElementById('order-btn');
-  if (homeBtn) {
-    homeBtn.classList.remove('visible');
-    if (id === 'home') {
-      setTimeout(() => homeBtn.classList.add('visible'), 500);
+    const aboutBtn = document.getElementById("order-btn-about");
+    if (aboutBtn) {
+      aboutBtn.classList.remove("visible");
+      if (id === "about") {
+        setTimeout(() => aboutBtn.classList.add("visible"), 1000);
+      }
     }
+
+    // posun hore
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  const aboutBtn = document.getElementById('order-btn-about');
-  if (aboutBtn) {
-    aboutBtn.classList.remove('visible');
-    if (id === 'about') {
-      setTimeout(() => aboutBtn.classList.add('visible'), 1000);
-    }
-  }
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = link.dataset.section;
+      if (target) {
+        showSection(target);
+        navLinks.classList.remove("show"); // zavrie menu po kliknutí
+      }
+    });
+  });
 
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
 
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    const homeBtn = document.getElementById('order-btn');
-    if (homeBtn) homeBtn.classList.add('visible');
-  }, 500);
+  // default sekcia
+  showSection("home");
 });
-
-

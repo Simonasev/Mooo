@@ -5,35 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MOOO Bistro</title>
   <link rel="stylesheet" href="styless.css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./sources/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./sources/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./sources/favicon-16x16.png">
+  <link rel="manifest" href="./sources/site.webmanifest">
+
 </head>
 <body>
 
 <header>
-  <nav style="display: flex; align-items: center; justify-content: space-between;">
-    <ul>
-      <li><a href="#" class="active" onclick="showSection('home')">Domov</a></li>
-      <li><a href="#" onclick="showSection('about')">O nás</a></li>
-      <li><a href="#" onclick="showSection('menu')">Menu</a></li>
-      <li><a href="#" onclick="showSection('contact')">Kontakt</a></li>
+  <nav>
+    <div class="hamburger">☰</div>
+    <ul class="nav-links">
+      <li><a href="#" data-section="home">Domov</a></li>
+      <li><a href="#" data-section="about">O nás</a></li>
+      <li><a href="#" data-section="menu">Menu</a></li>
+      <li><a href="#" data-section="contact">Kontakt</a></li>
     </ul>
   </nav>
 </header>
 
 <!-- home page -->
-<section id="home">
+<section id="home" class="content-section active">
   <div class="logo-box">
     <img src="sources/1584700880.avif" alt="Logo" class="logo-under-nav">
   </div>
   <h1>Čerstvý ako hovädo</h1>
   <p>Objednaj si svoje obľúbené jedlo online</p>
-  <a href="#" id="order-btn" class="btn" onclick="showSection('menu'); return false;">Objednaj si</a>
+  <a href="#" id="order-btn" class="btn" data-section="menu">Objednaj si</a>
 </section>
 
-<!-- Section -->
 <section id="about" class="content-section">
   <h2>O NÁS</h2>
-  <h3>Robiť dobré veci je jednoduché, ak ich robíte poctivo a od srdca. Také je aj naše jedlo, z plnohodnotných surovín pripravené poctivou prácou.</h3>
-  <a href="#" id="order-btn-about" class="btn" onclick="showSection('menu'); return false;">Objednaj si</a>
+  <h3>Robiť dobré veci je jednoduché, ak ich robíte poctivo a od srdca...</h3>
+  <a href="#" id="order-btn-about" class="btn" data-section="menu">Objednaj si</a>
 </section>
 
 <section id="menu" class="content-section">
@@ -44,26 +49,21 @@
       <p>Hovädzie mäso, cheddar, šalát, paradajka</p>
       <span>€9,50</span>
     </div>
-    <div class="menu-item">
-      <h3>Spicy BBQ</h3>
-      <p>Hovädzie mäso, BBQ omáčka, jalapeños, syr</p>
-      <span>€9,50</span>
-    </div>
   </div>
 </section>
 
 <section id="contact" class="content-section">
   <h2>Kontakt</h2>
   <p>Adresa: Jesenského 2183/2, 955 01 Topoľčany</p>
-  <p>Telefón: +421 952 072 180</p>
-  <p>Email: info@mooobistro.sk</p>
 </section>
 
 <footer>
   <p>&copy; 2025 MOOO Bistro. Všetky práva vyhradené.</p>
 </footer>
 
-<script src="javascript.js/script.js"></script>
+<script src="./javascript.js/script.js"></script>
 
+</body>
+</html>
 </body>
 </html>
